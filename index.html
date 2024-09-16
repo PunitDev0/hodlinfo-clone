@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hodlinfo UI</title>
+    <link rel="stylesheet" href="/public/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">HODLINFO</h1>
+            <div class="currency-selector">
+                <button>INR</button>
+                <button>BTC</button>
+                <button class="buy-btn">BUY BTC</button>
+            </div>
+        </header>
+
+        <div class="price-info">
+            <div class="percentage-info">
+                <p>0.1 %<br>5 Mins</p>
+                <p>0.96 %<br>1 Hour</p>
+                <p>2.73 %<br>1 Day</p>
+                <p>7.51 %<br>7 Days</p>
+            </div>
+            <div class="best-price">
+                <p>Best Price to Trade</p>
+                <h2>₹ 26,56,110</h2>
+                <p>Average BTC/INR net price including commission</p>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Platform</th>
+                    <th>Last Traded Price</th>
+                    <th>Buy / Sell Price</th>
+                    <th>Difference</th>
+                    <th>Savings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% tickers.forEach(ticker => { %>
+                    <tr>
+                      <td><%= ticker.name %></td>
+                      <td><%= ticker.last %></td>
+                      <td><%= ticker.buy %></td>
+                      <td><%= ticker.sell %></td>
+                      <td><%= ticker.volume %></td>
+                      <td><%= ticker.base_unit %></td>
+                    </tr>
+                  <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

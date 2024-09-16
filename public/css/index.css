@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1F2430;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    color: #00E6B8;
+}
+
+.buttons {
+    display: flex;
+}
+
+.currency-btn {
+    background-color: #2B313D;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.buy-btn {
+    background-color: #1BCF7B;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.price-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.percentages {
+    display: flex;
+    justify-content: space-between;
+}
+
+.percentage-item {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.percentage-item p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.percentage-item span {
+    font-size: 14px;
+}
+
+.best-price {
+    text-align: center;
+}
+
+.best-price h2 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-table thead {
+    background-color: #2B313D;
+}
+
+.price-table th, .price-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #3A3F4B;
+}
+
+.negative {
+    color: #E63946;
+}
+
+.positive {
+    color: #1BCF7B;
+}

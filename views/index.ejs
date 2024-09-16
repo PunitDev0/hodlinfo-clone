@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hodlinfo UI</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">HODLINFO</h1>
+            <div class="buttons">
+                <button class="currency-btn">INR</button>
+                <button class="currency-btn">BTC</button>
+                <button class="buy-btn">BUY BTC</button>
+            </div>
+        </header>
+
+        <section class="price-info">
+            <div class="percentages">
+                <div class="percentage-item">
+                    <p>0.1 %</p>
+                    <span>5 Mins</span>
+                </div>
+                <div class="percentage-item">
+                    <p>0.96 %</p>
+                    <span>1 Hour</span>
+                </div>
+                <div class="percentage-item">
+                    <p>2.73 %</p>
+                    <span>1 Day</span>
+                </div>
+                <div class="percentage-item">
+                    <p>7.51 %</p>
+                    <span>7 Days</span>
+                </div>
+            </div>
+
+            <div class="best-price">
+                <p>Best Price to Trade</p>
+                <h2>₹ 26,56,110</h2>
+                <p>Average BTC/INR net price including commission</p>
+            </div>
+        </section>
+
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Platform</th>
+                    <th>Last Traded Price</th>
+                    <th>Buy / Sell Price</th>
+                    <th>Difference</th>
+                    <th>Savings</th>
+                </tr>
+            </thead>
+            <tbody>
+              <% tickers.forEach(ticker => { %>
+                <tr>
+                  <td><%= ticker.name %></td>
+                  <td><%= ticker.last %></td>
+                  <td><%= ticker.buy %></td>
+                  <td><%= ticker.sell %></td>
+                  <td><%= ticker.volume %></td>
+                  <td><%= ticker.base_unit %></td>
+                </tr>
+              <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
+
